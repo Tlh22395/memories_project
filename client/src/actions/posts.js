@@ -1,8 +1,7 @@
-import * as api from '../api';
+import * as api from '../api/index.js';
 
 //Action Creators
 export const getPosts = () => async (dispatch) => {
-    const action = { type: 'FETCH_ALL', payload: [] }
     try {
         const { data } = await api.fetchPosts();
 
@@ -20,4 +19,4 @@ export const createPost = (post) => async (dispatch) => {
     } catch (error) {
         console.log(error);
     }
-}
+};
