@@ -1,3 +1,5 @@
+
+
 export default (posts = [], action) => {
     switch (action.type) {
         case 'FETCH_ALL':
@@ -7,4 +9,4 @@ export default (posts = [], action) => {
         default:
             return posts;
     }
-}
+};
